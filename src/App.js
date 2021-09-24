@@ -13,7 +13,7 @@ function App() {
     validate: values =>{
       let errors = {};
       if(!values.email) errors.email = 'Field required';
-      if(values.email && /[A-Za-z]+@[A-Za-z]+\.[A-Za-z]+/.test(values.email) !== true) errors.email = 'Username should be an email';
+      if(values.email && /[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z]+/.test(values.email) !== true) errors.email = 'Username should be an email';
       if(!values.password) errors.password = 'Field required';
       return errors;
     }
